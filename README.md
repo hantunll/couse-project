@@ -7,8 +7,8 @@ Course project regarding data science/ machine learning
 >>> fruit_recognition.ipynb (水果辨識)
 >>> kaggle_titanic.ipynb
 
->109
->> Programming Language
+>1091/1092
+>> Programming Language (Java)
 >>> Basketball data analyze platform
 
 >1101
