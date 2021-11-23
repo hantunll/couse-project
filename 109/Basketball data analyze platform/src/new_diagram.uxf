@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>836</x>
+      <y>424</y>
+      <w>152</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>QueryPanel
+--
+inputPanel : JPanel
+gameDataManagement : GameDataManagement
+lblTeam : JLabel
+lblTime : JLabel
+lblPlayerNum : JLabel
+teamCombo : JComboBox&lt;String&gt;
+functionCombo : JComboBox&lt;String&gt;
+txtTime : JTextField
+txtPlayerNum : JTextField
+submitButton : JButton
+outputPanel : JPanel
+outputPanelLayout : CardLayout
+gamePanel : JPanel
+playerPanel : JPanel
+playerInGamePanel : JPanel
+playerScrollPane : JScrollPane
+gameScrollPane : JScrollPane
+playerInGameScrollPane : JScrollPane
+table1 : JTable
+table2 : JTable
+table3 : JTable
+model1 : DefaultTableModel
+model2 : DefaultTableModel
+model3 : DefaultTableModel
+playerName : JLabel
+playerTeam : JLabel
+gameTime : JLabel
+gamePlace : JLabel
+gameHost : JLabel
+gameGuest : JLabel
+pgPlayer : JLabel
+pgTeam : JLabel
+pgGuest : JLabel
+pgTime : JLabel
+pgPlace : JLabel
+insets : Insets
+querySQL : ExecSQL
+instructionPanel : JPanel
+titleLabel : JLabel
+instructionTxt : JTextArea
+--
+QueryPanel()
+--
+createInputPanel()
+createInstructionPanel()
+setInputPanelGUI()
+createOutputPanel()
+createSubmitBtn(GameDataManagement)
+initPlayerPanel()
+initGamePanel()
+initPlayerInGamePanel()
+setTableGUI(JTable)
+showResult(DefaultTableModel)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>0</y>
+      <w>88</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>NCCUBasketball
+--
+panel : JPanel
+contentLayout : CardLayout
+loginPanel : LoginPanel
+generalPanel : GeneralPanel
+managerPanel : ManagerPanel
+m1 : UserManagement
+--
+NCCUBasketball()
+--
+main(String[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>416</y>
+      <w>116</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>RegisterFrame
+--
+userManagement : UserManagement
+panel : JPanel
+titleLabel : JLabel
+userIDLabel : JLabel
+passwordLabel : JLabel
+passwordConfirmLabel : JLabel
+departmentLabel : JLabel
+userIDField : JTextField
+passwordField : JPasswordField
+passwordConfirmField : JPasswordField
+departmentComboBox : JComboBox
+textArea : JTextArea
+submitButton : JButton
+--
+RegisterFrame()
+--
+createSubmitButton()
+createDepartmentComp()
+createConfirmComp()
+createPasswordComp()
+createIdComp()
+createTitle()
+setGUI()
+addSubmitButtonListener()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>220</y>
+      <w>180</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>ManagerPanel
+--
+recordButton : JButton
+playerMButton : JButton
+recordGamePanel : JPanel
+playerMPanel : JPanel
+--
+ManagerPanel()
+--
+createButtonPanel()
+createCardPanel()
+createScheduleButton()
+createQueryButton()
+createRecordButton()
+createPlayerMButton()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>420</y>
+      <w>124</w>
+      <h>164</h>
+    </coordinates>
+    <panel_attributes>GamePanel
+--
+LAYOUT : GridBagLayout
+instructionPanel : JPanel
+functionPanel : JPanel
+titleLabel : JLabel
+timeLabel : JLabel
+placeLabel : JLabel
+hostLabel : JLabel
+guestLabel : JLabel
+timeTextField : JTextField
+placeTextField : JTextField
+hostComboBox : JComboBox
+guestComboBox : JComboBox
+instructionTxt : JTextArea
+submitButton : JButton
+gameManagement : GameManagement
+host : String
+--
+GamePanel()
+--
+createInstructionPanel()
+createFunctionPanel()
+createSubmitBtn()
+createhostComboBox()
+createguestComboBox()
+setGUI()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>676</x>
+      <y>420</y>
+      <w>116</w>
+      <h>164</h>
+    </coordinates>
+    <panel_attributes>SchedulePanel
+--
+LAYOUT : GridBagLayout
+months : String[]
+years : String[]
+yearCombo : JComboBox
+monthCombo : JComboBox
+table : JTable
+scroll : JScrollPane
+instructionPanel : JPanel
+instructionTxt : JTextArea
+titleLabel : JLabel
+model : CalendarModel
+gameManagement : GameManagement
+--
+SchedulePanel()
+--
+createTable()
+createTitleCombo()
+setGUI()
+setScheduleGame()
+depNametoShort(String)
+depNametoLong(String)
+--
+CalendarModel
+ComboHandler
+MonthHandler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>268</x>
+      <y>420</y>
+      <w>128</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>PlayerManagementPanel
+--
+LAYOUT : GridBagLayout
+instructionPanel : JPanel
+functionPanel : JPanel
+submitPanel : JPanel
+functionComboBox : JComboBox
+positionComboBox : JComboBox
+depComboBox : JComboBox
+titleLabel : JLabel
+depLabel : JLabel
+nameLabel : JLabel
+positionLabel : JLabel
+numberLabel : JLabel
+nameTextField : JTextField
+playerNumberTextField : JTextField
+instructionTxt : JTextArea
+textArea : JTextArea
+submitButton : JButton
+playerManagement : PlayerManagement
+--
+PlayerManagementPanel()
+--
+createInstructionPanel()
+createFunctionPanel()
+createSubmitPanel()
+createSubmitBtn(PlayerManagement)
+createFunctionComboBox()
+createPositionComboBox()
+createDepComboBox(JComboBox)
+setGUI()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1032</x>
+      <y>208</y>
+      <w>148</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>LoginPanel
+--
+imgLabel : JLabel
+titleLabel : JLabel
+userIDLabel : JLabel
+passwordLabel : JLabel
+userIDField : JTextField
+passwordField : JPasswordField
+loginButton : JButton
+registerButton : JButton
+--
+LoginPanel()
+--
+createLoginButton()
+createRegisterButton()
+createPasswordComp()
+createIdComp()
+createTitle()
+setGUI()
+getLoginButton()
+addRegisterButtonListener()
+addLoginButtonListener(JPanel, 
+UserManagement, JMenuBar)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>216</y>
+      <w>220</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>GeneralPanel
+--
+FRAME_WIDTH : int
+FRAME_HEIGHT : int
+DARKBLUE : Color
+LIGHTBLUE : Color
+LAYOUT : GridBagLayout
+titlePanel : JPanel
+imgLabel : JLabel
+titleLabel : JLabel
+buttonPanel : JPanel
+scheduleButton : JButton
+queryButton : JButton
+cardPanel : JPanel
+schdulePanel : JPanel
+queryPanel : JPanel
+--
+GeneralPanel()
+--
+createScheduleButton()
+createQueryButton()
+createTitlePanel()
+createButtonPanel()
+createCardPanel()
+buttonGUI(JButton)
+setGUI()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>760</y>
+      <w>108</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+time : String
+place : String
+host : String
+guest : String
+--
+Game(String)
+Game(String, String, String, String)
+--
+getTime()
+getPlace()
+getHost()
+getGuest()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>544</x>
+      <y>652</y>
+      <w>188</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>GameManagement
+--
+game : Game
+playerGame : PlayerGame
+gameSQL : ExecSQL
+--
+GameManagement()
+--
+addGame(Game)
+findGame(Game)
+updateDatabase(int, int, int, int, int, int, int, int, int,
+int, int, int, int, int, int)
+findGameID(String, String, String, String)
+getScheduleGame()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>1084</y>
+      <w>144</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>ExecSQL
+--
+url : String
+username : String
+password : String
+conn : Connection
+result : ResultSet
+--
+ExecSQL()
+--
+initializing()
+findTable(String)
+createUserTable()
+createPlayerTable()
+createGameTable()
+createPlayerGameTable()
+findUser(String)
+addUser(User)
+addPlayer(Player)
+deletPlayer(Player)
+modifyPlayer(Player)
+getPlayersID(String)
+addGame(Game)
+updateDatabase(PlayerGame)
+findGameID(Game)
+findGame(Game)
+addSchduleGame()
+queryGame(String, String)
+queryGameData(String, String)
+queryPlayer(String, int)
+queryPlayerData(String, int)
+findPlayerID(String, int)
+findGameID(String, String)
+queryPlayerInGameData(String, String, int)
+findPlayerName(String, int)
+findPlayerDepartment(String, int)
+findTimeInGame(String, String)
+findGamePlace(String, String)
+findGameHost(String, String)
+findGameGuest(String, String)
+bg=light_gray
+fg=dark_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>272</x>
+      <y>1192</y>
+      <w>108</w>
+      <h>236</h>
+    </coordinates>
+    <panel_attributes>PlayerGame
+--
+totalPoint : int
+twoPA : int
+twoPM : int
+threePA : int
+threePM : int
+fairPA : int
+fairPM : int
+offReb : int
+defReb : int
+assist : int
+steal : int
+block : int
+turnover : int
+foul : int
+gameID : int
+playerNumber : int
+--
+PlayerGame(int, int, int, int, int, int, int, int, int,
+int, int, int, int, int, int)
+--
+getGameID()
+getPlayernum()
+getTwoPA()
+gettwoPM()
+getthreePA()
+getthreePM()
+getfairPA()
+getfairPM()
+getoffReb()
+getdefReb()
+getassist()
+getsteal()
+getblock()
+getturnover()
+getfoul()
+getTotalPoint()
+setTotalPoint(int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>268</x>
+      <y>664</y>
+      <w>116</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>PlayerManagement
+--
+pmSQL : ExecSQL
+--
+PlayerManagement()
+--
+addPlayer(String, int, String, String)
+deletePlayer(String, int, String, String)
+modifyPlayer(String, int, String, String)
+getPlayerNum(String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>760</y>
+      <w>96</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+name : String
+depName : String
+position : String
+num : int
+--
+Player(String, String, String, int)
+--
+getName()
+getNum()
+getPosition()
+getDepName()
+setName(String)
+setNum(int)
+setPosition(String)
+setDepName(String)
+getDepNumber(String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>840</y>
+      <w>140</w>
+      <h>316</h>
+    </coordinates>
+    <panel_attributes>GameEventFrame
+--
+compSize : Dimension
+panelSize : Dimension
+font16 : Font
+submitButton : JButton
+panel : JPanel
+dataPanel : JPanel
+lblGameID : JLabel
+txtGameID : JLabel
+lblTime : JLabel
+txtTime : JLabel
+lblPlace : JLabel
+txtPlace : JLabel
+lblHost : JLabel
+txtHost : JLabel
+lblGuest : JLabel
+txtGuest : JLabel
+lblTotalPoint : JLabel
+txtTotalPoint : JLabel
+department : String
+gameRecordPanel : JPanel
+titlePanel : JPanel
+player1Panel : JPanel
+player2Panel : JPanel
+...
+player1LabelValue : ArrayList&lt;Integer&gt;
+player2LabelValue : ArrayList&lt;Integer&gt;
+...
+player1number : int
+player2number : int
+...
+recordGameManagement : GameManagement
+--
+GameEventFrame()
+--
+getPlayer1LabelValue()
+getPlayer2LabelValue()
+...
+createSubmitButton(GameManagement)
+createDataPanel()
+setDataPanelGUI()
+createColumnTitlePanel()
+createGameRecordPanel()
+getTime()
+getPlace()
+getHost()
+getGuest()
+getGameID()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>836</x>
+      <y>856</y>
+      <w>152</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>GameDataManagement
+--
+tableData : ResultSet
+querySQL : ExecSQL
+--
+GameDataManagement()
+--
+queryPlayer(String, int)
+queryGame(String, String)
+queryPlayerInGameData(String, String, int)
+getResult()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>856</y>
+      <w>116</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>UserManagement
+--
+exec : ExecSQL
+user : User
+--
+UserManagement()
+--
+addUser(String, String, String, String)
+userExist(String)
+passwordCorrect(String, String)
+getUser()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>952</y>
+      <w>116</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>User
+--
+userID : String
+password : String
+identity : String
+department : String
+--
+User(String, String, String, String)
+--
+getID()
+getPassword()
+getIdentity()
+getDepartment()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>976</y>
+      <w>108</w>
+      <h>172</h>
+    </coordinates>
+    <panel_attributes>PlayerGamePanel
+--
+LAYOUT : GridLayout
+player : PlayerManagement
+department : String
+playerCombo : JComboBox
+twoPM : JPanel
+twoPA : JPanel
+threePM : JPanel
+threePA : JPanel
+fairPM : JPanel
+fairPA : JPanel
+offReb : JPanel
+defReb : JPanel
+assist : JPanel
+steal : JPanel
+block : JPanel
+turnover : JPanel
+foul : JPanel
+labelValue : ArrayList&lt;Integer&gt;
+--
+PlayerGamePanel(String)
+--
+getScoreLabelValue(ScorePanel)
+getValue()
+getPlayerNum()
+createScorePanel()
+createCombox()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>128</x>
+      <y>1192</y>
+      <w>108</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>ScorePanel
+--
+LAYOUT : FlowLayout
+minusButton : JButton
+scoreLabel : JLabel
+plusButton : JButton
+--
+ScorePanel()
+--
+getScoreValue()
+createScoreLabel()
+createPlusButton()
+createMinusButton()
+setGUI()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>280</y>
+      <w>228</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>550.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>280</y>
+      <w>88</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>64</y>
+      <w>12</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>764</x>
+      <y>372</y>
+      <w>12</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>308</y>
+      <w>12</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>308</y>
+      <w>12</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>608</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>720</y>
+      <w>12</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>1060</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>212</x>
+      <y>1144</y>
+      <w>12</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>580</y>
+      <w>12</w>
+      <h>268</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;650.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>580</y>
+      <w>12</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>580</y>
+      <w>12</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>728</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>284</x>
+      <y>1144</y>
+      <w>12</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>844</x>
+      <y>372</y>
+      <w>12</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>764</y>
+      <w>12</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1096</x>
+      <y>348</y>
+      <w>12</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1092</x>
+      <y>572</y>
+      <w>12</w>
+      <h>292</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;710.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>920</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>684</y>
+      <w>404</w>
+      <h>408</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+bg=magenta
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;990.0;1000.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>728</y>
+      <w>92</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+bg=magenta
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;890.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>844</x>
+      <y>916</y>
+      <w>80</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+bg=magenta
+fg=light_gray</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>892</x>
+      <y>888</y>
+      <w>156</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+bg=magenta
+fg=light_gray</panel_attributes>
+    <additional_attributes>370.0;10.0;10.0;490.0</additional_attributes>
+  </element>
+</diagram>
