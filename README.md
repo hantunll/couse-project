@@ -1,0 +1,15 @@
+# couse-project
+
+Course project regarding data science/ machine learning
+
+>1082
+>> Computer Programming
+>>> fruit_recognition.ipynb (水果辨識)
+>>> kaggle_titanic.ipynb
+
+>109
+>> Programming Language
+>>> Basketball data analyze platform
+
+>1101
+>> Data Science
